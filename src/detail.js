@@ -371,7 +371,7 @@ function calculPrixProduit(prod, prixOpt, opt) {
 
 document.getElementById("btnAjoutPanier").addEventListener('click' , function(){
   ajouterPanierDepuisPageDetail(prod)
-  document.getElementById("nbProduit").innerHTML= panier.length()
+  document.getElementById("nbProduit").innerHTML= panier.length
   
 })
 
@@ -395,10 +395,15 @@ function ajouterPanierDepuisPageDetail(){
 
   }
   affichePanierModal(duration = 1000);
+
+
   localStorage.setItem('panier', JSON.stringify(panier)); // Sauvegarde le panier da
    panier = JSON.parse(localStorage.getItem('panier')) || [];
   document.getElementById("nbProduit").innerHTML = panier.length;
   document.getElementById("nbProduit1").innerHTML = panier.length;
+
+
+  location.reload(); 
 }
 
 

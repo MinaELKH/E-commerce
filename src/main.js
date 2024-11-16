@@ -354,4 +354,4 @@ if (path.endsWith("/nexio/") || path.endsWith("/nexio/index.html")) {
     afficheDetail(id);
 } else {
     console.log("Chemin non reconnu :", path);
-/*}
+}*/

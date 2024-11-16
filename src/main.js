@@ -326,7 +326,7 @@ function afficheAllFavoris() {
 const path = window.location.pathname;
 
 // Gestion des chemins selon GitHub Pages
-if (path.endsWith("/E-commerce/") || path.endsWith("E-commerce/index.html")) {
+if (path.endsWith("/E-commerce/") || path.endsWith("/E-commerce/index.html")) {
     console.log("index.html  je suis là");
     afficheAllFavoris();
 } else if (path.endsWith("/E-commerce/detail.html")) {

@@ -81,7 +81,7 @@
         </div>
 
     </header>
-    <!-- principal mina -->
+    <!-- principal mina
     <a href="./panier.html" class=" hover:text-gray-300 ">
     <div class="fixed right-0 top-48  w-16 h-16 max-auto flex flex-col items-center justify-center">
         
@@ -93,7 +93,30 @@
         <img src="img/cartEmpty.png" class="w-8 h-8 " alt="panier">
         
     </div>
-    </a>
+    </a> -->
+
+
+    <!--mina-->
+
+    <div class="fixed right-0 top-56 bg-black rounded-full p-2.5 w-10 h-42 mx-auto flex flex-col items-center justify-center">
+        <a id="iconAfficheFavori" href="catalogue.html?afficheFavori=true" class="block material-symbols-outlined text-xl text-red-500 cursor-pointer">
+            favorite
+        </a>
+        <a id="btn_tri_nom" href="catalogue.html?afficheTriNom=true" class="material-symbols-outlined text-xl text-gray-500 hover:text-yellow-500">
+            sort_by_alpha
+        </a>
+        <a id="btn_tri" href="catalogue.html?afficheTriPrix=true" class="material-symbols-outlined text-xl text-gray-500 hover:text-yellow-500">
+            filter_alt
+        </a>
+        <a href="./panier.html" class="relative">
+            <p id="nbProduit" class="text-xs w-4 h-4 bg-red-500 absolute top-0 right-0 rounded-full text-center flex items-center justify-center text-white">
+                0
+            </p>
+            <img src="img/cartEmpty.png" class="w-8 h-8" alt="panier">
+        </a>
+    </div>
+
+<!--mina-->
 
 
 
@@ -307,7 +330,7 @@
 
     </section>
 
-    <a href="devis.html" target="_blank">Devis</a>
+ 
 
 
 </body>
@@ -440,6 +463,19 @@
         </div>
     </div>
 </footer>
+
+
+
+<!-- model ajout au panier  -->
+<div id="panierModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+    <div class="bg-white shadow-md p-4">
+        <p class="text-center  font-medium text-gray-800">Produit bien ajouté au panier</p>
+    </div>
+</div>
+
+
+
+
 <script src="./src/data.js"></script>
 <script src="./src/detail.js"></script>
 <script src="./src/main.js"></script>

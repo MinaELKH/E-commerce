@@ -298,34 +298,39 @@ function afficheAllFavoris() {
   afficheAllPromo(produitsAffiches, 0, 4)
 
 }
+/********************************** ******************/
+////// chemin sur server  local /////
+/********************************** ******************/
+ // gestion des chemins en local (appel au fonctions sur page index.html et detail.html:
 
-
-
-  // appel au fonction sur les pages :
-  /*if (window.location.pathname === "/") {
+const path = window.location.pathname;
+ 
+  if (window.location.pathname === "/") {
     console.log("index.html  je suis la ");
     afficheAllFavoris() ; 
-  } else if (window.location.pathname === "./detail.html") {
+  } else if (window.location.pathname === "/detail.html") {
     // console.log(location.search)  //  par exemple ?id=12
     const param = new URLSearchParams(window.location.search);
     const id = param.get("id"); // Récupère la valeur de 'id'
      console.log("lkjkjlmjkkl"); // Affiche 12
      afficheDetail(id);
-  }else if (window.location.pathname === "./index.html") {
+  }else if (window.location.pathname === "/index.html") {
     console.log("index.html  je suis la ");
     afficheAllFavoris() ; 
   } 
    else {
     console.log(window.location.pathname );
   }
-*/
+
+/******************************************************** */
 
 
+/********************************** ******************/
+////// chemin sur server  local /////
+/********************************** ******************/
 
+// Gestion des chemins selon hitHub Pages
 
-const path = window.location.pathname;
-
-// Gestion des chemins selon GitHub Pages
 if (path.endsWith("/E-commerce/") || path.endsWith("/E-commerce/index.html")) {
     console.log("index.html  je suis là");
     afficheAllFavoris();

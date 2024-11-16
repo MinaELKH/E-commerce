@@ -302,7 +302,7 @@ function afficheAllFavoris() {
 
 
   // appel au fonction sur les pages :
-  if (window.location.pathname === "/") {
+  /*if (window.location.pathname === "/") {
     console.log("index.html  je suis la ");
     afficheAllFavoris() ; 
   } else if (window.location.pathname === "./detail.html") {
@@ -318,3 +318,21 @@ function afficheAllFavoris() {
    else {
     console.log(window.location.pathname );
   }
+*/
+
+
+  // Obtenir le chemin relatif correctement pour GitHub Pages
+const path = window.location.pathname;
+
+// Gestion des chemins selon GitHub Pages
+if (path.endsWith("/nexio/") || path.endsWith("/nexio/index.html")) {
+    console.log("index.html  je suis là");
+    afficheAllFavoris();
+} else if (path.endsWith("/nexio/detail.html")) {
+    const param = new URLSearchParams(window.location.search);
+    const id = param.get("id"); // Récupère la valeur de 'id'
+    console.log("Je suis sur detail.html avec ID :", id);
+    afficheDetail(id);
+} else {
+    console.log("Chemin non reconnu :", path);
+}

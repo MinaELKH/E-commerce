@@ -331,10 +331,10 @@ const path = window.location.pathname;
 
 // Gestion des chemins selon hitHub Pages
 
-if (path.endsWith("/E-commerce/") || path.endsWith("/E-commerce/index.html")) {
+if (path.endsWith("/nexio/") || path.endsWith("/nexio/index.html")) {
     console.log("index.html  je suis là");
     afficheAllFavoris();
-} else if (path.endsWith("/E-commerce/detail.html")) {
+} else if (path.endsWith("/nexio/detail.html")) {
     const param = new URLSearchParams(window.location.search);
     const id = param.get("id"); // Récupère la valeur de 'id'
     console.log("Je suis sur detail.html avec ID :", id);
